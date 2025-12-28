@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polio Visual — Creative Web</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', monospace;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f2027, #000);
+    color: #eaeaea;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 40px rgba(0,255,200,0.2);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.2em;
+    color: #00ffe0;
+    letter-spacing: 2px;
+}
+
+.header p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.08);
+}
+
+.image-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,200,0.15);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    color: #00ffe0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00ffe0, #00aaff);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0,255,200,0.5);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>POLIO VISUAL</h1>
+        <p>Creative Photography • Digital Art • Web Design</p>
+    </div>
+
+    <div class="content">
+        <!-- FOTO -->
+        <div class="image-box">
+            <img src="foto.jpg" alt="Polio Art">
+        </div>
+
+        <!-- INFO -->
+        <div class="info">
+            <div class="card">
+                <h2>About Designer</h2>
+                <p>
+                    Seorang designer yang menggabungkan visual, emosi, dan teknologi
+                    ke dalam karya digital. Web ini dibuat sebagai bentuk eksplorasi
+                    seni dan identitas kreatif.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Web Creator</h2>
+                <p>
+                    HTML • CSS • Visual Concept<br>
+                    Fokus pada desain modern, interaktif,
+                    dan memiliki kesan artistik yang kuat.
+                </p>
+                <p style="margin-top:10px;">
+                    <strong>Contact:</strong><br>
+                    085894085948
+                </p>
+            </div>
+
+            <div class="buttons">
+                <button onclick="alert('Terima kasih sudah mengapresiasi karya ini ✨')">
+                    Apresiasi
+                </button>
+                <button onclick="alert('Hubungi: 085894085948')">
+                    Contact
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 • Polio Visual • Designed with emotion
+    </div>
+</div>
+
+</body>
+</html>
